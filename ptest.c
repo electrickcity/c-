@@ -1,28 +1,22 @@
 #include <stdio.h>
+int max(int x, int y)
+{
+  if (x>y)
+  return x;
+  else
+  return y;
+
+}
 int main(void)
 {
-  int months,days;
-  printf("달을 입력하시오: ");
-  scanf("%d",&months);
-  switch(months)
-  {
-      case 2:
-        days = 28;
-      break;
+  int x,y;
 
-      case 4:
-      case 6:
-      case 9:
-      case 11:
-        days = 30;
-        break;
-
-      default:
-      days = 31;
-      break;
-  }
-
-    printf("%d월의 일수는 %d일 입니다.", months, days);
-
+  printf("정수를 입력하시오: ");
+  scanf("%d", &x);
+  printf("정수를 입력하시오: ");
+  scanf("%d", &y);
+  int larger;
+  larger = max( x,  y);
+  printf("더 큰 값은 %d입니다.",larger);
   return 0;
 }
